@@ -7,13 +7,19 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "node-fetch": "^3.3.2",
     "react": "^19.1.0",
+    "react-beautiful-dnd": "^13.1.1",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
     "react-dom": "^19.1.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+   "start": "npm run load-tasks && concurrently \"npm run server\" \"react-scripts start\"",
+    "load-tasks": "node loadSampleTasks.js",
+    "server": "json-server --watch db.json --port 5000",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -35,5 +41,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "json-server": "^1.0.0-beta.3"
   }
 }
