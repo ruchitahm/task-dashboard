@@ -1,0 +1,14 @@
+Self-Evaluation Document
+1. Half-Page Summary
+This project is a task management app built using React on the frontend and json-server as a mock backend. Users can create and view tasks that can be moved between columns like "To Do", "In Progress", and "Done". The app uses drag-and-drop functionality to manage tasks.
+
+2. Self-Criticism
+The app works as expected, allowing users to add and move tasks. The UI is simple and responsive. But there are a few things that could be better. For example, it doesn’t handle errors when fetching or updating tasks. It could also use something like Redux for managing state as it grows. Right now, there are no test cases for the components or API, and there's no authentication, so anyone can access the data.
+
+3. Improvements
+If I had more time, I would add authentication so users can manage their tasks separately. I would also make sure to handle errors and validate inputs properly. Also write test cases for both the frontend and backend would be a priority. And finally, I would work on improving the state management to make the app more scalable as it grows.
+
+4. Technology Rating
+React: 8/10
+React-DND: 8/10
+Concurrently: 9/10
